@@ -1,0 +1,15 @@
+{
+    "name": "scrapping/scrapping",
+    "description": "Découverte scrapping",
+    "require": {
+        "clue/buzz-react": "^2.5",
+        "symfony/dom-crawler": "^5.1",
+        "symfony/css-selector": "^5.1",
+        "react/mysql": "^0.5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "AsyncScraper\\": "src/"
+        }
+    }
+}
