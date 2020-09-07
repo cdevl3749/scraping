@@ -4,48 +4,32 @@ namespace AsyncScraper;
 
 final class Image
 {
-    /**
-     * @var int
-     */
+    
     public $id;
-    /**
-     * @var string[]
-     */
+    
     public $nomcrypto;
-    /**
-     * @var string[]
-     */
+    
     public $montantcap;
-    /**
-     * @var string[]
-     */
+   
     public $prix;
-    /**
-     * @var string[]
-     */
+    
     public $montantvolume;
-    /**
-     * @var string[]
-     */
+    
     public $montantoffre;
-    /**
-     * @var string[]
-     */
+    
     public $montantvariation;
-    /**
-     * @var string[]
-     */
+    
     public $source;
 
     public function __construct(
         int $id,
-        string $nomcrypto,
-        string $montantcap,
-        string $prix,
-        string $montantvolume,
-        string $montantoffre,
-        string $montantvariation,
-        string $source
+        $nomcrypto,
+        $montantcap,
+        $prix,
+        $montantvolume,
+        $montantoffre,
+        $montantvariation,
+        $source
     ) {
         $this->id = $id;
         $this->nomcrypto = $nomcrypto;
