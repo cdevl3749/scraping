@@ -10,15 +10,17 @@ $browser = new \Clue\React\Buzz\Browser($loop);
 $scraper = new \AsyncScraper\Scraper($browser);
 
 $urls = [
-    'https://coinmarketcap.com/fr/',
+    'https://coinmarketcap.com/fr/currencies/bitcoin/',
+    'https://coinmarketcap.com/fr/currencies/ethereum/',
+    'https://coinmarketcap.com/fr/currencies/tether/'
 ];
 
 $storage = new \AsyncScraper\Storage($loop, 'root:blog@127.0.0.1/scraping?idle=0');
 
 $scraper->scrape(...$urls)
     ->then(function (array $images) use ($storage) {
-        //var_dump($images);
-        $storage->save(...$images);
+        var_dump($images);
+        //$storage->save(...$images);
     });
 
 $loop->run();
